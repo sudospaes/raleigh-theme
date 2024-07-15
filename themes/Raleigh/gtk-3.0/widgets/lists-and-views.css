@@ -11,8 +11,7 @@ treeview,
 iconview,
 list,
 textview,
-entry,
-.entry
+entry
 {
 	background-color: @color_2;
 }
@@ -22,14 +21,12 @@ treeview:disabled,
 iconview:disabled,
 list:disabled,
 textview:disabled,
-entry:disabled,
-.entry:disabled
+entry:disabled
 {
 	background-color: @hover_bg_color;
 }
 
 entry,
-.entry,
 textview,
 :not(stack) > list
 {
@@ -44,11 +41,6 @@ treeview header button:hover
 {
 	padding: 6px;
 	padding-top: 5px;
-}
-
-treeview.separator
-{
-	min-height: 3px;
 }
 
 /*
@@ -104,8 +96,7 @@ list > row
 
 /* Entry widgets */
 
-entry,
-.entry
+entry
 {
 	padding: 4px;
 }

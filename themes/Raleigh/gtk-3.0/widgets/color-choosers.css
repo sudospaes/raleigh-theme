@@ -70,12 +70,12 @@ colorswatch:selected:not(:focus) > overlay
 
 colorswatch.dark:selected > overlay
 {
-	color: white;
+	color: @selected_fg_color;
 }
 
 colorswatch.light:selected > overlay
 {
-	color: black;
+	color: @fg_color;
 }
 
 
