@@ -1,0 +1,25 @@
+name: Release Raleigh Theme
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Packing theme
+        run: |
+          tar raleigh-theme.tar.gz icons themes LICENSE install.sh
+        
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}     
+          file: raleigh-theme.tar.gz
+          asset_name: raleigh-theme-v${{ github.ref }}.tar.gz
+          prerelease: true
