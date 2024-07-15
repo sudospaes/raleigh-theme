@@ -13,7 +13,7 @@ jobs:
 
       - name: Packing theme
         run: |
-          tar raleigh-theme.tar.gz icons themes LICENSE install.sh
+          tar -zcvf raleigh-theme.tar.gz icons themes LICENSE install.sh
         
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
